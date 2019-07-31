@@ -31,10 +31,11 @@ function App() {
         <Route exact path="/" component={Auth} />
         <NavTab />
 
-        <Route exact path="/MarketPlace" component={MarketPlace} />
+        {/* <Route exact path="/MarketPlace" component={MarketPlace} />
+        <Route exact path="/OurTeam" component={TeamCards} />
         <Route path="/CategoriesPage" component={CategoriesPage} />
         <Route path="/ComparisonList" component={ComparisonList} />
-        <Route exact path="/BusinessProfile" component={BusinessProfile} />
+        <Route exact path="/BusinessProfile" component={BusinessProfile} /> */}
         <OtherItems />
         <Contact />
       </div>
