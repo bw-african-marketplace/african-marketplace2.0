@@ -76,7 +76,7 @@ class LoginForm extends Component {
         password: this.state.password
       })
       .then(() => {
-        localProps.props.history.push("/MarketPlace");
+        localProps.props.history.push("/BusinessProfile");
       })
 
       .catch(e => {

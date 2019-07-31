@@ -16,6 +16,7 @@ const NavTab = (props) =>  {
     }
     const logo = require("../images/African-Marketplace-logo.png");
     
+    
     return (
         <div>
            <Segment>
