@@ -57,7 +57,12 @@ const NavTab = (props) => {
           active={activeItem === 'businessProfile'}
         
         /> </Link>
-        
+        <Link to="/CategoriesPage">
+    <Menu.Item
+       name='CategoriesPage'
+       active={activeItem === 'Categories Page'}
+    />
+</Link>
 
         <Menu.Menu position='right'>
           <Menu.Item>
