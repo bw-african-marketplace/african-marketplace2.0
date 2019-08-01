@@ -21,13 +21,13 @@ export default function CategoryItems() {
 
   return (
     <div>
-      {product && product.map(item => {
+      {product && product.map((item, index) => {
+        // if (item.category === 'cooking')
         return (
           <div>
             <Item.Group>
-              <Item style={{backgroundColor: "white"}}>
-                {console.log(item)}
-                <Item.Image size="small" src="https://picsum.photos/200" />
+              <Item key={index} style={{backgroundColor: "white"}}>
+                <Item.Image size="small" src={item.URL} />
                 <Item.Content
                   verticalAlign="middle"
                   style={{ textAlign: "left" }}
