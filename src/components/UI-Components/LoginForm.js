@@ -16,27 +16,12 @@ class LoginForm extends Component {
     return (
       <div className="LoginForm">
         <div>
-          {" "}
-          <b> Login below </b> or click signup button to register{" "}
+        
+          <b> Login Below </b>
         </div>
         <p />
         <form onSubmit={this.handleSubmit}>
-          {/* <label htmlFor="firstName">First Name</label>
-        <input
-          name="firstName"
-          type="text"
-          placeholder="Enter your first name."
-          value={firstName}
-          onChange={this.handleChange}
-        /> */}
-          {/* <label htmlFor="lastName">Last Name</label>
-        <input
-          name="lastName"
-          type="text"
-          placeholder="Enter your last name."
-          value={lastName}
-          onChange={this.handleChange}
-        /> */}
+         
           <label htmlFor="email">User Name: &nbsp; </label>
           <input
             name="userName"
@@ -54,7 +39,7 @@ class LoginForm extends Component {
             onChange={this.handleChange}
           />
           &nbsp;&nbsp;
-          <button type="submit"> Click To Login</button>
+          <button style={{backgroundColor: "#e94c3d", padding: "3px"}} type="submit"> Submit</button>
         </form>
       </div>
     );
@@ -70,13 +55,13 @@ class LoginForm extends Component {
     console.log("Submitting");
     event.preventDefault();
     const localProps = this.props;
-    axios
+    return axios
       .post("https://african-marketplace.herokuapp.com/auth/login", {
         username: this.state.userName,
         password: this.state.password
       })
-      .then(() => {
-        localProps.props.history.push("/MarketPlace");
+      .then((res) => { console.log(res); localStorage.setItem('token', res.data.token)
+        localProps.props.history.push("/BusinessProfile");
       })
 
       .catch(e => {

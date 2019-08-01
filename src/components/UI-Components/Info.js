@@ -2,7 +2,7 @@ import React from "../../../node_modules/react";
 import { Card, Icon, Image } from "../../../node_modules/semantic-ui-react";
 
 const Info = () => (
-  <Card>
+  <Card style={{width: '100%', marginTop: '10px'}}>
     {/* <Image
       src="https://images.pexels.com/photos/277253/pexels-photo-277253.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
       wrapped

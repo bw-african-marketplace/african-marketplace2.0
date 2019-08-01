@@ -7,18 +7,21 @@ export default function Auth(props) {
     const [isSignin, SetSignin]=useState(false)
 
     const handleSignUpButtonClick = ()=> {
-        SetSignin(false) 
+        SetSignin(!isSignin) 
     }
-    const handleSignInButtonClick = ()=> {
-        SetSignin(true) 
-    }
+    // const handleSignInButtonClick = ()=> {
+    //     SetSignin(true) 
+    // }
 
     return (
       <div>
-        {!isSignin && <RegForm props={props} />}
-        {isSignin && <LoginForm props={props} />}
-        <button onClick={handleSignInButtonClick}> Sign in</button>
-        <button onClick={handleSignUpButtonClick}>Sign up</button>
+      
+        {isSignin ? <LoginForm props={props} /> : <RegForm props={props} />}  
+        <p></p>
+        <p></p>
+        <p></p>
+        <button style={{backgroundColor: "#e94c3d", padding: "3px"}} onClick={handleSignUpButtonClick}> {isSignin ? "Click Here To Register" : "Click Here To Login"}</button>
+       
       </div>
     );
 }

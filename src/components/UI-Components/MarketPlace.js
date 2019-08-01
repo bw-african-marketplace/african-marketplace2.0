@@ -1,22 +1,18 @@
 import React from '../../../node_modules/react'
 
-import ComparisonList from "./ComparisonList";
 
-import OtherItems from "./OtherItems";
+// import ComparisonList from "./ComparisonList";
 import TopImage from "./TopImage";
 import Info from "./Info";
+// import CategoriesPage from '../CategoriesPage';
 
 export default function MarketPlace() {
     return (
-      <div>
-        {/* <SearchBar/> */}
-        
-        <div className="container-flex">
-          <TopImage />
+      <div className="container-flex">
           <Info />
-        </div>
-        <ComparisonList />
-        <OtherItems />
+          <div>
+            <TopImage />
+          </div>
       </div>
     );
 }
