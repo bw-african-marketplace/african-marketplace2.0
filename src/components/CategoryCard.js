@@ -3,6 +3,8 @@
 
 import React from "react";
 import { Card, Image } from "semantic-ui-react";
+import { Link} from 'react-router-dom'
+import CategoryItems from './CategoryItems'
 
 const CategoryCard = () => {
 
@@ -12,7 +14,8 @@ const CategoryCard = () => {
       'category': 'Animal Products', 
       'imgUrl': require('../images/categories/meats.jpg'),
       'description': '',
-      'examples': 'eggs, honey, meats, etc.'
+      'examples': 'eggs, honey, meats, etc.',
+      'products': ['meats', 'butter', 'lamb']
     },
     {
       'category': 'Beans', 
@@ -42,7 +45,8 @@ const CategoryCard = () => {
       'category': 'Fruits', 
       'imgUrl': require('../images/categories/fruit.jpg'),
       'description': '',
-      'examples': 'bananas, citrus, exotic fruits, etc.'
+      'examples': 'bananas, citrus, exotic fruits, etc.',
+      'products': ['banana', 'orange', 'lemon']
     },
     {
       'category': 'Other', 
@@ -80,18 +84,21 @@ const CategoryCard = () => {
   return (
         categories.map((cat, index) => {
           return (
-            <Card key={index} centered={true} style={{ maxWidth: "350px", width: "100%", height: "auto", margin: "10px" }}>
-              <Image key={index} style={{ width: "100%" }} src={cat.imgUrl} />
-              <Card.Content>
-                <Card.Header>{cat.category}</Card.Header>
-                <Card.Meta>
-                  <span className="date">{cat.examples}</span>
-                </Card.Meta>
-                <Card.Description>
-                  {cat.description}
-                </Card.Description>
-              </Card.Content>
-            </Card>
+            <Link to={`/CategoriesPage/${cat.category}`}>
+              {/* <CategoryItems products={cat.products} /> */}
+              <Card key={index} centered={true} style={{ maxWidth: "350px", width: "100%", height: "auto", margin: "10px" }}>
+                <Image key={index} style={{ width: "100%" }} src={cat.imgUrl} />
+                <Card.Content>
+                  <Card.Header>{cat.category}</Card.Header>
+                  <Card.Meta>
+                    <span className="date">{cat.examples}</span>
+                  </Card.Meta>
+                  <Card.Description>
+                    {cat.description}
+                  </Card.Description>
+                </Card.Content>
+              </Card>
+            </Link>
           )
         })
   )

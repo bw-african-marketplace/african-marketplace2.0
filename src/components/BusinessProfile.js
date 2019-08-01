@@ -49,7 +49,7 @@ const BusinessProfile= ()=> {
                {productInfo.map(item => {
                    return (
                    <Grid.Column className='infoGrid'>
-                       <Image src= {item.image} />
+                       <Image className="grid-pics" src= {item.image} />
                            <div className= 'information'>
                                <h3 className= 'product'>{item.name}</h3>
                                <p className= 'id'>Item Code{item.id}</p>
