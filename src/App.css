@@ -11,6 +11,24 @@ body {
     
   }
   
+  .TeamCards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border: green 1px solid;
+    width:800px
+
+  }
+
+.card-container {
+
+  width: 900px;
+  height: 90px;
+
+}
+  
 .App {
   text-align: center;
   background-color: black;
