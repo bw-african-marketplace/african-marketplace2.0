@@ -6,7 +6,7 @@ import {Form} from 'semantic-ui-react'
 const Contact = () => {
   const TextArea ="text"
   const Checkbox="box"
-  const button="botton"
+  const button="button"
 return (
   <div>
     <h1>Contact Us!</h1>

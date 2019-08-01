@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useState, useEffect } from "react";
 import '../App.css';
 import  'semantic-ui-react'
 import productInfo from './ProductInfo'
 import { Grid, Image } from "semantic-ui-react"
-const BusinessProfile = (props) =>{
+import axiosWithAuth from "./axioAuth";
+
+// const BusinessProfile = (props) =>{
 //    console.log(productInfo)
 //        export default function SearchForm({ onSearch }) {
 //        const [query, setQuery] = useState({
@@ -13,14 +15,41 @@ const BusinessProfile = (props) =>{
 //          setQuery({ ...query, name: event.target.value })
 //        }
 // const products = [productInfo, setProductInfo] = useState([{}])
+
+// const productsOwned=()=>{
+//     axiosWithAuth()
+// }
+
+
+const BusinessProfile= ()=> {
+     const [items, setItems] = useState();
+     
+     const getItems = (id) => {
+       axiosWithAuth()
+         .get(``)
+         .then(response => console.log("Axios Response", response))
+         .catch(error => {
+           console.log(error.response.message);
+         });
+     };
+     useEffect(() => getItems(), []);
+     console.log(items, "items here");
+
+
+
    return (
    <div>
-       <Grid>
+
+       <form>
+           <input />
+       </form>
+
+       {/* <Grid>
            <Grid.Row columns={3}>
                {productInfo.map(item => {
                    return (
                    <Grid.Column className='infoGrid'>
-                       <Image src= {item.image} />
+                       <Image className="grid-pics" src= {item.image} />
                            <div className= 'information'>
                                <h3 className= 'product'>{item.name}</h3>
                                <p className= 'id'>Item Code{item.id}</p>
@@ -32,7 +61,7 @@ const BusinessProfile = (props) =>{
                    </Grid.Column>
                    )})}
                </Grid.Row>
-           </Grid>
+           </Grid> */}
        </div>
    )
 }
