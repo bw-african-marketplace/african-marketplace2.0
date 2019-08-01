@@ -6,13 +6,14 @@ class LoginForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      userName: "",
-      password: ""
+      username: "",
+      password: "",
+      department: ""
     };
   }
 
   render() {
-    const { firstName, lastName, userName, password } = this.state;
+    const { firstName, department, username, password } = this.state;
     return (
       <div>
         <div>Register</div>
@@ -33,12 +34,20 @@ class LoginForm extends Component {
           value={lastName}
           onChange={this.handleChange}
         /> */}
+          <label htmlFor="email">Department</label>
+          <input
+            name="department"
+            type="text"
+            placeholder="Enter your user department."
+            value={department}
+            onChange={this.handleChange}
+          />
           <label htmlFor="email">User Name</label>
           <input
-            name="userName"
+            name="username"
             type="text"
             placeholder="Enter your user name."
-            value={userName}
+            value={username}
             onChange={this.handleChange}
           />
           <label htmlFor="email">Password</label>
@@ -49,7 +58,7 @@ class LoginForm extends Component {
             value={password}
             onChange={this.handleChange}
           />
-          <button type="submit">Login</button>
+          <button type="submit">Submit</button>
         </form>
       </div>
     );
@@ -66,12 +75,17 @@ class LoginForm extends Component {
     event.preventDefault();
     const localProps = this.props
     axios
-    .post("http://localhost:5000/api/register", {username: this.state.userName, password: this.state.password})
-    .then(()=> {localProps.props.history.push("/MarketPlace")})
-    
-    .catch((e)=> {
-        
-        console.log("shitz on fire")})
+      .post("https://african-marketplace.herokuapp.com/auth/register", {
+        username: this.state.userName,
+        password: this.state.password
+      })
+      .then(() => {
+        localProps.props.history.push("/MarketPlace");
+      })
+
+      .catch(e => {
+        console.log("shitz on fire");
+      });
 
   };
 }
