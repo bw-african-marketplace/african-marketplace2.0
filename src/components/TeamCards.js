@@ -2,7 +2,7 @@ import React from 'react'
 import { Card, Image } from 'semantic-ui-react'
 
 const TeamCards = () => (
-  <Card.Group className = "TeamCards">
+  <Card.Group style={{fontWeight:"bold"}} className = "TeamCards">
     <Card className = "card-container">
       <Card.Content>
         <Image floated='right' size='mini' src='https://react.semantic-ui.com/images/avatar/large/molly.png' />
