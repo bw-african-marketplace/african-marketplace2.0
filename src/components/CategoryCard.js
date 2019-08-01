@@ -86,7 +86,7 @@ const CategoryCard = () => {
           return (
             <Link to={`/CategoriesPage/${cat.category}`}>
               {/* <CategoryItems products={cat.products} /> */}
-              <Card key={index} centered={true} style={{ maxWidth: "350px", width: "100%", height: "auto", margin: "10px" }}>
+              <Card key={index} centered={true} style={{ maxWidth: "225px", width: "100%", height: "auto", margin: "10px" }}>
                 <Image key={index} style={{ width: "100%" }} src={cat.imgUrl} />
                 <Card.Content>
                   <Card.Header>{cat.category}</Card.Header>
