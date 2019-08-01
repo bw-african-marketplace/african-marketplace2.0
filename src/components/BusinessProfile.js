@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import '../App.css';
-import  'semantic-ui-react'
-import productInfo from './ProductInfo'
-import { Grid, Image } from "semantic-ui-react"
+import  'semantic-ui-react';
+import productInfo from './ProductInfo';
+import { Grid, Image } from "semantic-ui-react";
 import axiosWithAuth from "./axioAuth";
+import AddForm from './UI-Components/AddForm';
 
 // const BusinessProfile = (props) =>{
 //    console.log(productInfo)
@@ -24,26 +25,46 @@ import axiosWithAuth from "./axioAuth";
 const BusinessProfile= ()=> {
      const [items, setItems] = useState();
      
-     const getItems = (id) => {
+     const getItems = (item) => {
+         console.log(item, "item")
        axiosWithAuth()
-         .get(``)
-         .then(response => console.log("Axios Response", response))
+         .post(`/items/additem`, item)
+         .then(res => console.log(res, "res"))
          .catch(error => {
            console.log(error.response.message);
          });
      };
-     useEffect(() => getItems(), []);
-     console.log(items, "items here");
+    //  useEffect(() => getItems(), []);
+    //  console.log(items, "items here");
+const [product, setProduct] = useState();
+     const getProducts = () => {
+       axiosWithAuth()
+         .get(`/items`)
+         .then(response => setProduct(response.data))
+         .catch(error => {
+           console.log(error.response.message);
+         });
+     };
+     useEffect(() => getProducts(), []);
+     console.log(product, "products here");
 
-
+const [deletes, setDelete]= useState();
+const deleteItem=(id)=>{
+  axiosWithAuth().delete(`https://african-marketplace.herokuapp.com/items/${id}`)
+  .then(response => console.log(response) ) 
+  .catch(error =>{
+      console.log(error.response.message);
+  });
+  }
+console.log(deletes)
 
    return (
    <div>
+      {product && product.map((item, i) => {return <div key={i}> <h1 style={{ color: "blue" }}> {item.name}</h1> <h1>{item.description}</h1> <h1>{item.price}</h1>  <h1>{item.location}</h1>
+      <button stylye={{color: "white"}} onClick={()=>{return deleteItem(item.id),setTimeout(function(){ document.location.reload();}, 900)}}> Delete </button>
+      </div>  })}
 
-       <form>
-           <input />
-       </form>
-
+       <AddForm getItems={getItems} />
        {/* <Grid>
            <Grid.Row columns={3}>
                {productInfo.map(item => {
