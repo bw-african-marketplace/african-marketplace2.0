@@ -17,6 +17,8 @@ export default function Auth(props) {
       <div>
         {!isSignin && <RegForm props={props} />}
         {isSignin && <LoginForm props={props} />}
+        {/* <LoginForm props={props}/>
+        <RegForm props={props}/> */}
         <button onClick={handleSignInButtonClick}> Sign in</button>
         <button onClick={handleSignUpButtonClick}>Sign up</button>
       </div>

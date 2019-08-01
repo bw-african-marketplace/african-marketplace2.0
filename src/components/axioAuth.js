@@ -1,13 +1,12 @@
+import axios from "axios";
 
-import axios from 'axios';
+export default function() {
+  const token = localStorage.getItem("token");
 
-
-// helper function that sets authorization header to the token value and returns axios object
-export const axiosWithAuth = (token) => {
-    return axios.create({
-        headers: {
-            'Content-Type': 'application/json',
-            'Authorization': `${token}`,
-        }
-    });
-};
+  return axios.create({
+    headers: {
+      Authorization: token
+    },
+    baseURL: "https://african-marketplace.herokuapp.com/"
+  });
+}
