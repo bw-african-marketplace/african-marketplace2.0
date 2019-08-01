@@ -16,25 +16,10 @@ class LoginForm extends Component {
     const { firstName, department, username, password } = this.state;
     return (
       <div>
-        <div>Register</div>
+        <div>Register Below</div>
+        <p/>
         <form onSubmit={this.handleSubmit}>
-          {/* <label htmlFor="firstName">First Name</label>
-        <input
-          name="firstName"
-          type="text"
-          placeholder="Enter your first name."
-          value={firstName}
-          onChange={this.handleChange}
-        /> */}
-          {/* <label htmlFor="lastName">Last Name</label>
-        <input
-          name="lastName"
-          type="text"
-          placeholder="Enter your last name."
-          value={lastName}
-          onChange={this.handleChange}
-        /> */}
-          <label htmlFor="email">Department</label>
+          <label htmlFor="email">Department: &nbsp; </label>
           <input
             name="department"
             type="text"
@@ -42,7 +27,7 @@ class LoginForm extends Component {
             value={department}
             onChange={this.handleChange}
           />
-          <label htmlFor="email">User Name</label>
+          <label htmlFor="email">&nbsp;&nbsp;User Name:&nbsp;</label>
           <input
             name="username"
             type="text"
@@ -50,15 +35,16 @@ class LoginForm extends Component {
             value={username}
             onChange={this.handleChange}
           />
-          <label htmlFor="email">Password</label>
+          <label htmlFor="email">&nbsp;&nbsp;Password:&nbsp;</label>
           <input
             name="password"
             type="password"
             placeholder="Enter your password."
             value={password}
             onChange={this.handleChange}
-          />
-          <button type="submit">Submit</button>
+          />&nbsp;
+          <button style={{backgroundColor: "#e94c3d", padding: "3px"}} type="submit">Submit</button>
+          <br/>
         </form>
       </div>
     );

@@ -33,6 +33,7 @@ class AddForm extends Component {
             name="category"
             value={this.state.category}
             onChange={this.onChangeHandle}
+    //        
           />
           Name:
           <input
