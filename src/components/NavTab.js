@@ -1,10 +1,9 @@
 //tab component
-import React, {useState} from '../../node_modules/react'
+import React, { useState } from '../../node_modules/react'
 import { Menu, Segment } from '../../node_modules/semantic-ui-react'
 import { Link } from 'react-router-dom'
 
-
-const NavTab = (props) =>  {
+const NavTab = (props) => {
   console.log(props)
 
   //same as set people = props.setPeople
@@ -68,8 +67,8 @@ const NavTab = (props) =>  {
             </Menu.Menu>
           </Menu>
         </div>
-        
-        )
+  
+  )
 }
 
 export default NavTab;
