@@ -17,6 +17,7 @@ import ComparisonList from "./components/UI-Components/ComparisonList";
 
 import OtherItems from "./components/UI-Components/OtherItems";
 import CategoryItems from './components/CategoryItems';
+import Footer from './components/Footer'
 
 // import ComparisonList from './components/UI-Components/ComparisonList';
 // import LoginForm from './components/LoginForm';
@@ -39,7 +40,8 @@ function App() {
         <Route path="/ComparisonList" component={ComparisonList} />
         <Route exact path="/BusinessProfile" component={BusinessProfile} />
         <OtherItems />
-        <Contact />
+        <Route path="/Contact" component={Contact} />
+        <Footer />
       </div>
     </div>
   );
