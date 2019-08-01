@@ -16,6 +16,7 @@ import CategoriesPage from './components/CategoriesPage';
 import ComparisonList from "./components/UI-Components/ComparisonList";
 
 import OtherItems from "./components/UI-Components/OtherItems";
+import CategoryItems from './components/CategoryItems';
 
 // import ComparisonList from './components/UI-Components/ComparisonList';
 // import LoginForm from './components/LoginForm';
@@ -32,7 +33,9 @@ function App() {
         <NavTab />
 
         <Route exact path="/MarketPlace" component={MarketPlace} />
-        <Route path="/CategoriesPage" component={CategoriesPage} />
+        <Route exact path="/CategoriesPage" component={CategoriesPage} />
+        <Route exact path="/CategoriesPage/:category" render={(props) => <CategoryItems {...props} />} />
+
         <Route path="/ComparisonList" component={ComparisonList} />
         <Route exact path="/BusinessProfile" component={BusinessProfile} />
         <OtherItems />

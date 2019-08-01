@@ -22,9 +22,9 @@ import axios from 'axios';
 
 // }
 
-const CategoryItems = () => (
+const CategoryItems = (props) => (
   <Container>
-
+  {console.log('props', props)}
     <Item.Group>
       <Item>
         <Item.Image size='small' src='https://picsum.photos/200' />
