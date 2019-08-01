@@ -21,26 +21,32 @@ export default function CategoryItems() {
 
   return (
     <div>
-      {product && product.map(item => {return <div> <h1 style={{ color: "blue" }}> {item.name}</h1> <h1>{item.description}</h1> <h1>{item.price}</h1>  <h1>{item.location}</h1>
-      </div>  })}
+      {product && product.map(item => {
+        return (
+          <div>
+            <Item.Group>
+              <Item style={{backgroundColor: "white"}}>
+                {console.log(item)}
+                <Item.Image size="small" src="https://picsum.photos/200" />
+                <Item.Content
+                  verticalAlign="middle"
+                  style={{ textAlign: "left" }}
+                >
+                  <Item.Header as="a">{item.name}</Item.Header>
+                  <Item.Description style={{color: 'black'}}>Location: {item.location}</Item.Description>
+                  <Item.Description style={{color: 'black'}}>Location: {item.description}</Item.Description>
+                  <Item.Description style={{color: 'black'}}>Price: {item.price}</Item.Description>
+                  <Item.Extra>
+                    <Icon color="green" name="check" /> 121 Votes
+                  </Item.Extra>
+                </Item.Content>
+              </Item>
+            </Item.Group>
+          </div>
+        )  
+      })}
   
-      <Item.Group>
-        <Item.Group>
-          <Item>
-            <Item.Image size="small" src="https://picsum.photos/200" />
-            <Item.Content
-              verticalAlign="middle"
-              style={{ textAlign: "left" }}
-            >
-              <Item.Header as="a">Product Name</Item.Header>
-              <Item.Description>Quick description</Item.Description>
-              <Item.Extra>
-                <Icon color="green" name="check" /> 121 Votes
-              </Item.Extra>
-            </Item.Content>
-          </Item>
-        </Item.Group>
-      </Item.Group>
+      
     </div>
   );
 }
