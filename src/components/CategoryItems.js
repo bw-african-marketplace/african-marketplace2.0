@@ -22,7 +22,7 @@ export default function CategoryItems() {
   return (
     <div>
       {product && product.map((item, index) => {
-        // if (item.category === 'cooking')
+        if (item.category === 'cooking')
         return (
           <div>
             <Item.Group>
