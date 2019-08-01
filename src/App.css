@@ -17,8 +17,8 @@ body {
     justify-content: center;
     padding-top: 50px;
     padding-bottom: 50px;
-    border: green 1px solid;
-    width:800px
+    max-width: 800px;
+    width: 100%;
 
   }
 
@@ -73,7 +73,10 @@ body {
 
 .container-flex {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 /* ---------------------Logo Image--------------------------------------- */
@@ -98,6 +101,7 @@ body {
   /* align-items: center; */
   justify-content: center;
   flex-direction: row;
+  flex-wrap: wrap;
   /* width: 200%; */
   margin-top: 2%;
 }
