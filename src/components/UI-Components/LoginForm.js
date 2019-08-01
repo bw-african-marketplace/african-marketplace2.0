@@ -16,8 +16,8 @@ class LoginForm extends Component {
     return (
       <div className="LoginForm">
         <div>
-          {" "}
-          <b> Login below </b> or click signup button to register{" "}
+        
+          <b> Login below </b> or click signup button to register
         </div>
         <p />
         <form onSubmit={this.handleSubmit}>
@@ -70,12 +70,12 @@ class LoginForm extends Component {
     console.log("Submitting");
     event.preventDefault();
     const localProps = this.props;
-    axios
+    return axios
       .post("https://african-marketplace.herokuapp.com/auth/login", {
         username: this.state.userName,
         password: this.state.password
       })
-      .then(() => {
+      .then((res) => { console.log(res); localStorage.setItem('token', res.data.token)
         localProps.props.history.push("/BusinessProfile");
       })
 
