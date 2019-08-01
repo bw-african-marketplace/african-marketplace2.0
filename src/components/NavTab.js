@@ -1,6 +1,8 @@
 //tab component
-import React, {useState} from '../../node_modules/react'
-import { Menu, Segment } from '../../node_modules/semantic-ui-react'
+import React, {useState} from 'react'
+import { Menu,} from 'semantic-ui-react'
+import  '../App.css'
+
 
 
 const NavTab = (props) =>  {
@@ -14,13 +16,18 @@ const NavTab = (props) =>  {
       event.preventDefault()
 
     }
-    const logo = require("../images/African-Marketplace-logo.png");
     
     return (
         <div>
-           <Segment>
-            <img alt='logo' src={logo} />
-          </Segment>
+
+          <div className= 'logo-title-container'>
+            <div className='logo-container'>
+              <div className='logo-image'></div>
+            </div>
+              <div className= 'title'>Business Profile</div>
+          </div>
+
+
           <Menu pointing>
               <Menu.Item name='Home' 
                 active={activeItem === 'home'} 
@@ -32,27 +39,41 @@ const NavTab = (props) =>  {
                 onClick={handleItemClick}
               />
               <Menu.Item
+                  name='Categories'
+                active={activeItem === 'categories'}
+                onClick={handleItemClick}
+              />
+              <Menu.Item
                 name='Contact Us'
                 active={activeItem === 'Contact Us'}
                 onClick={handleItemClick}
               />
-              <Menu.Item
+              <Menu.Item className = 'business'
                 name='Business Profile'
                 active={activeItem === 'businessProfile'}
                 onClick={handleItemClick}
               />
-              <Menu.Menu position='right'>
+              <Menu.Menu position='left'>
 
               <Menu.Item>
                 <button icon='search'
-                    placeholder='Search...'>{buttonText} 
+                    placeholder='Search...'>Search
+                    
                 </button>
+                <input className='searchBox'  Business Profile 
+                  />
+                
+                
               </Menu.Item>
             </Menu.Menu>
           </Menu>
-        </div>
-        
-        )
+          
+      <div>
+
+  </div>
+</div>
+   
+      )
 }
 
-export default NavTab;
+export default NavTab;  
