@@ -32,18 +32,10 @@ function App() {
         <Route exact path="/" component={Auth} />
         <NavTab />
 
-<<<<<<< HEAD
-        {/* <Route exact path="/MarketPlace" component={MarketPlace} />
-        <Route exact path="/OurTeam" component={TeamCards} />
-        <Route path="/CategoriesPage" component={CategoriesPage} />
-        <Route path="/ComparisonList" component={ComparisonList} />
-        <Route exact path="/BusinessProfile" component={BusinessProfile} /> */}
-=======
         <Route exact path="/" component={MarketPlace} />
         <Route path="/CategoriesPage" component={CategoriesPage} />
         <Route exact path="/" component={ComparisonList} />
         <Route exact path="/BusinessProfile" component={BusinessProfile} />
->>>>>>> master
         <OtherItems />
         <Contact exact path="Contact" component={Contact}/>
         <Route exact path="/CategoryItems" component={CategoryItems} />
