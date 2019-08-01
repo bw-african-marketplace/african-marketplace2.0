@@ -39,8 +39,9 @@ function App() {
 
         <Route path="/ComparisonList" component={ComparisonList} />
         <Route exact path="/BusinessProfile" component={BusinessProfile} />
+        <Route exact path="/Contact" component={Contact} />
+        <Route exact path="/OurTeam" component={TeamCards} />
         <OtherItems />
-        <Route path="/Contact" component={Contact} />
         <Footer />
       </div>
     </div>
