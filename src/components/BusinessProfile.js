@@ -36,13 +36,35 @@ const BusinessProfile= ()=> {
      };
     //  useEffect(() => getItems(), []);
     //  console.log(items, "items here");
+const [product, setProduct] = useState();
+     const getProducts = () => {
+       axiosWithAuth()
+         .get(`/items`)
+         .then(response => setProduct(response.data))
+         .catch(error => {
+           console.log(error.response.message);
+         });
+     };
+     useEffect(() => getProducts(), []);
+     console.log(product, "products here");
 
-
+const [deletes, setDelete]= useState();
+const deleteItem=(id)=>{
+  axiosWithAuth().delete(`https://african-marketplace.herokuapp.com/items/${id}`)
+  .then(response => console.log(response) ) 
+  .catch(error =>{
+      console.log(error.response.message);
+  });
+  }
+console.log(deletes)
 
    return (
    <div>
-       <AddForm getItems={getItems} />
+      {product && product.map((item, i) => {return <div key={i}> <h1 style={{ color: "blue" }}> {item.name}</h1> <h1>{item.description}</h1> <h1>{item.price}</h1>  <h1>{item.location}</h1>
+      <button stylye={{color: "white"}} onClick={()=>{return deleteItem(item.id),setTimeout(function(){ document.location.reload();}, 900)}}> Delete </button>
+      </div>  })}
 
+       <AddForm getItems={getItems} />
        {/* <Grid>
            <Grid.Row columns={3}>
                {productInfo.map(item => {

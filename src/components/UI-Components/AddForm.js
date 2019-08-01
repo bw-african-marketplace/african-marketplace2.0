@@ -9,6 +9,7 @@ class AddForm extends Component {
     price: '',
     location: '',
     URL: '',
+    user_id: '',
   };
 
   onChangeHandle=(e)=>{
@@ -19,6 +20,7 @@ class AddForm extends Component {
  onSubmitHandle=(e)=>{
   e.preventDefault();
   this.props.getItems(this.state)
+  setTimeout(function(){ document.location.reload();}, 900)
 }
 
   render() {
@@ -26,29 +28,40 @@ class AddForm extends Component {
       <div>
         <form onSubmit={this.onSubmitHandle}>
           
-          Category: <input
+          Category:
+          <input
             name="category"
             value={this.state.category}
             onChange={this.onChangeHandle}
           />
-          Name: <input
+          Name:
+          <input
             name="name"
             value={this.state.name}
             onChange={this.onChangeHandle}
           />
-          Description: <input
+          Description:
+          <input
             name="description"
             value={this.state.description}
             onChange={this.onChangeHandle}
           />
-          Price: <input
+          Price:
+          <input
             name="price"
             value={this.state.price}
             onChange={this.onChangeHandle}
           />
-          Location: <input
+          Location:
+          <input
             name="location"
             value={this.state.location}
+            onChange={this.onChangeHandle}
+          />
+          User ID:
+          <input
+            name="user_id"
+            value={this.state.user_id}
             onChange={this.onChangeHandle}
           />
           <button>Submit</button>
