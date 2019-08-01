@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import '../App.css';
-import  'semantic-ui-react'
-import productInfo from './ProductInfo'
-import { Grid, Image } from "semantic-ui-react"
+import  'semantic-ui-react';
+import productInfo from './ProductInfo';
+import { Grid, Image } from "semantic-ui-react";
 import axiosWithAuth from "./axioAuth";
+import AddForm from './UI-Components/AddForm';
 
 // const BusinessProfile = (props) =>{
 //    console.log(productInfo)
@@ -24,25 +25,23 @@ import axiosWithAuth from "./axioAuth";
 const BusinessProfile= ()=> {
      const [items, setItems] = useState();
      
-     const getItems = (id) => {
+     const getItems = (item) => {
+         console.log(item, "item")
        axiosWithAuth()
-         .get(``)
-         .then(response => console.log("Axios Response", response))
+         .post(`/items/additem`, item)
+         .then(res => console.log(res, "res"))
          .catch(error => {
            console.log(error.response.message);
          });
      };
-     useEffect(() => getItems(), []);
-     console.log(items, "items here");
+    //  useEffect(() => getItems(), []);
+    //  console.log(items, "items here");
 
 
 
    return (
    <div>
-
-       <form>
-           <input />
-       </form>
+       <AddForm getItems={getItems} />
 
        {/* <Grid>
            <Grid.Row columns={3}>

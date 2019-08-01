@@ -66,12 +66,17 @@ class LoginForm extends Component {
     event.preventDefault();
     const localProps = this.props
     axios
-    .post("http://localhost:5000/api/register", {username: this.state.userName, password: this.state.password})
-    .then(()=> {localProps.props.history.push("/MarketPlace")})
-    
-    .catch((e)=> {
-        
-        console.log("shitz on fire")})
+      .post("https://african-marketplace.herokuapp.com/auth/register", {
+        username: this.state.userName,
+        password: this.state.password
+      })
+      .then(() => {
+        localProps.props.history.push("/MarketPlace");
+      })
+
+      .catch(e => {
+        console.log("shitz on fire");
+      });
 
   };
 }

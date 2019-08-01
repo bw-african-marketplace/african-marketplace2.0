@@ -17,7 +17,9 @@ export default function CategoryItems() {
      useEffect(() => getProducts(), []);
      console.log(product, "products here");
 
-
+const deleteItem=()=>{
+  axiosWithAuth().delete()
+}
 
   return (
     <div>
