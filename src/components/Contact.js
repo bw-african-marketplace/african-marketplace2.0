@@ -36,7 +36,7 @@ return (
         <Form.Field control={Checkbox} label='I agree to the Terms and Conditions' />
       
         <div className='form-row'>
-          <button>Submit</button>
+          <button style={{backgroundColor: "#e94c3d", padding: "5px"}}>Submit Contact Form</button>
         </div>
       </Form>
     </div>
