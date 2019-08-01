@@ -17,7 +17,10 @@ export default function Auth(props) {
       <div>
       
         {isSignin ? <LoginForm props={props} /> : <RegForm props={props} />}  
-        <button onClick={handleSignUpButtonClick}> {isSignin ? "Login" : "Register"}</button>
+        <p></p>
+        <p></p>
+        <p></p>
+        <button style={{backgroundColor: "#e94c3d", padding: "3px"}} onClick={handleSignUpButtonClick}> {isSignin ? "Click Here To Register" : "Click Here To Login"}</button>
        
       </div>
     );
