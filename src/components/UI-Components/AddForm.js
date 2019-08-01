@@ -38,7 +38,7 @@ class AddForm extends Component {
             <option value="CerealOther"> CerealOther </option>
             <option value="Peas"> Peas </option>
             <option value="RootTubers"> Root&Tubers </option>
-            <option value="Vegitable"> Vegitable </option>
+            <option value="Vegetable"> Vegetable </option>
             <option value="Other"> Other </option>
             value={this.state.category}
             onChange={this.onChangeHandle}
