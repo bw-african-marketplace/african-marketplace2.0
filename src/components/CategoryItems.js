@@ -7,24 +7,29 @@ import axiosWithAuth from './axioAuth';
 export default function CategoryItems() {
      const [product, setProduct] = useState();
      const getProducts = () => {
-       axiosWithAuth()
-         .get(`/items`)
-         .then(response => setProduct(response.data))
+      const id = window.location.href.split('/').pop() 
+      axiosWithAuth()
+         .get(`items/category/${id}`)
+         .then(response => {
+           setProduct([response.data])
+           console.log(window.location.href.split('/').pop())
+          })
          .catch(error => {
-           console.log(error.response.message);
+           console.log(error);
          });
      };
      useEffect(() => getProducts(), []);
      console.log(product, "products here");
 
-const deleteItem=()=>{
-  axiosWithAuth().delete()
-}
+     const deleteItem=()=>{
+      axiosWithAuth().delete()
+    }
+    
 
   return (
     <div>
       {product && product.map((item, index) => {
-        if (item.category === 'cooking')
+        // if (item.category === req.params.id)
         return (
           <div>
             <Item.Group>

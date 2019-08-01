@@ -11,7 +11,7 @@ const CategoryCard = () => {
   const categories = 
   [
     {
-      'category': 'Animal Products', 
+      'category': 'AnimalProducts', 
       'imgUrl': require('../images/categories/meats.jpg'),
       'description': '',
       'examples': 'eggs, honey, meats, etc.',
@@ -24,19 +24,19 @@ const CategoryCard = () => {
       'examples': 'Kidney, Soya, White, etc.'
     },
     {
-      'category': 'Cereals - Maize', 
+      'category': 'CerealsMaize', 
       'imgUrl': require('../images/categories/maize.jpg'),
       'description': '',
       'examples': 'Dry, Green, Maize Bran, etc.'
     },
     {
-      'category': 'Cereals - Other', 
+      'category': 'CerealsOther', 
       'imgUrl': require('../images/categories/wheat.jpg'),
       'description': '',
       'examples': 'barley, millet, sorghum, wheat, etc.'
     },
     {
-      'category': 'Cereals - Rice', 
+      'category': 'CerealsRice', 
       'imgUrl': require('../images/categories/rice.jpg'),
       'description': '',
       'examples': 'Kahama, Kayiso, Mbeya, etc.'
@@ -61,19 +61,25 @@ const CategoryCard = () => {
       'examples': 'chic, dry, green, etc.'
     },
     {
-      'category': 'Roots & Tubers', 
+      'category': 'Roots&Tubers', 
       'imgUrl': require('../images/categories/roots.jpg'),
       'description': '',
       'examples': 'potatoes, sunflowers, etc.'
     },
     {
-      'category': 'Seeds & Nuts', 
+      'category': 'Seeds&Nuts', 
       'imgUrl': require('../images/categories/nuts.jpg'),
       'description': '',
       'examples': 'nuts, sunflowers, etc.'
     },
     {
       'category': 'Vegetables', 
+      'imgUrl': require('../images/categories/vegetables.jpg'),
+      'description': 'test',
+      'examples': 'carrots, cauliflower, cucumber, etc.'
+    },
+    {
+      'category': 'cooking', 
       'imgUrl': require('../images/categories/vegetables.jpg'),
       'description': 'test',
       'examples': 'carrots, cauliflower, cucumber, etc.'
