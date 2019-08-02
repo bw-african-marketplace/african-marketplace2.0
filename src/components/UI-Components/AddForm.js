@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Form, Button, Divider } from 'semantic-ui-react'
 
 
 class AddForm extends Component {
@@ -29,7 +30,7 @@ class AddForm extends Component {
       <div>
 <p></p><p></p>
         <form onSubmit={this.onSubmitHandle}>
-          &nbsp;Category: &nbsp;
+          &nbsp;<strong>Choose Category:</strong> &nbsp;<br/>
           <select onChange={this.onChangeHandle} value={this.state.category} name="category">
             <option value="AnimalProducts">AnimalProducts </option>
             <option value="Beans"> Beans </option>
@@ -42,8 +43,37 @@ class AddForm extends Component {
             <option value="Vegetables"> Vegetables </option>
             <option value="Other"> Other </option>
           </select>
-          
-          &nbsp;Img URL:&nbsp;
+          <strong><p>Enter new product info below:</p></strong>
+          <Form size='mini' key='mini'>
+
+            <Form.Group widths='equal'>
+              <Form.Field name="URL" label='URL' control='input' placeholder='Img URL' value={this.state.URL}
+                onChange={this.onChangeHandle}/>
+              <Form.Field name="name" label='name' control='input' placeholder='Product' value={this.state.name} 
+                onChange={this.onChangeHandle}/>
+            </Form.Group>
+
+            <Form.Group widths='equal'>
+              <Form.Field name="description" label='description' control='input' placeholder='Description' value={this.state.description}
+                onChange={this.onChangeHandle}/>
+              <Form.Field name="price" label='price' control='input' placeholder='Price' value={this.state.price}
+                onChange={this.onChangeHandle}/>
+            </Form.Group>
+
+            <Form.Group widths='equal'>
+              <Form.Field name="location" label='location' control='input' placeholder='Location' value={this.state.location}
+                onChange={this.onChangeHandle}/>
+              <Form.Field name="user_id" label='user_id' control='input' placeholder='User ID' value={this.state.user_id}
+                onChange={this.onChangeHandle}/>
+            </Form.Group>
+
+            <Button color="red" type='submit'>Submit</Button>
+            <Divider hidden />
+          </Form>
+
+
+
+          {/* &nbsp;Img URL:&nbsp;
           <input
             name="URL"
             value={this.state.URL}
@@ -80,9 +110,9 @@ class AddForm extends Component {
             onChange={this.onChangeHandle}
             placeholder="Place User ID Here"
           /> <p></p>
-          <button style={{backgroundColor: "#e94c3d", padding: "5px"}}>Submit</button>
+          <button style={{backgroundColor: "#e94c3d", padding: "5px"}}>Submit</button> */}
         </form>
-        
+
       </div>
     );
   }
