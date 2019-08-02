@@ -24,31 +24,31 @@ class AddForm extends Component {
 }
 
   render() {
+    console.log(this.state.category)
     return (
       <div>
 <p></p><p></p>
         <form onSubmit={this.onSubmitHandle}>
           &nbsp;Category: &nbsp;
-          <select name="category">
+          <select onChange={this.onChangeHandle} value={this.state.category} name="category">
             <option value="AnimalProducts">AnimalProducts </option>
             <option value="Beans"> Beans </option>
             <option value="Fruits"> Fruits </option>
-            <option value="CerealMaize"> CerealMaize </option>
-            <option value="CerealRice"> CerealRice </option>
-            <option value="CerealOther"> CerealOther </option>
+            <option value="CerealsMaize"> CerealMaize </option>
+            <option value="CerealsRice"> CerealRice </option>
+            <option value="CerealsOther"> CerealOther </option>
             <option value="Peas"> Peas </option>
-            <option value="RootTubers"> Root&Tubers </option>
-            <option value="Vegetable"> Vegetable </option>
+            <option value="RootsTubers"> RootsTubers </option>
+            <option value="Vegetables"> Vegetables </option>
             <option value="Other"> Other </option>
-            value={this.state.category}
-            onChange={this.onChangeHandle}
           </select>
-
-          {/* <input
-            name="category"
-            value={this.state.category}
+          
+          &nbsp;Img URL:&nbsp;
+          <input
+            name="URL"
+            value={this.state.URL}
             onChange={this.onChangeHandle}
-          /> */}
+          />
           &nbsp;Name:&nbsp;
           <input
             name="name"

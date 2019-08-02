@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import '../App.css';
 import  'semantic-ui-react';
 import productInfo from './ProductInfo';
-import { Grid, Image } from "semantic-ui-react";
+import { Grid, Image, Card, Item, Icon, Button } from "semantic-ui-react";
 import axiosWithAuth from "./axioAuth";
 import AddForm from './UI-Components/AddForm';
 
@@ -59,31 +59,49 @@ const deleteItem=(id)=>{
 console.log(deletes)
 
    return (
-   <div>
+   <div style={{display: 'flex', flexDirection: 'column'}}>
        <AddForm getItems={getItems} />
-      {product && product.map((item, i) => {return <div key={i}> <h1 style={{ color: "blue" }}> {item.name}</h1> <h1>{item.description}</h1> <h1>{item.price}</h1>  <h1>{item.location}</h1>
-      <button style={{backgroundColor: "#e94c3d"}} onClick={()=>{return deleteItem(item.id),setTimeout(function(){ document.location.reload();}, 900)}}> Delete </button>
-      </div>  })}
-
-       
-       {/* <Grid>
-           <Grid.Row columns={3}>
-               {productInfo.map(item => {
-                   return (
-                   <Grid.Column className='infoGrid'>
-                       <Image className="grid-pics" src= {item.image} />
-                           <div className= 'information'>
-                               <h3 className= 'product'>{item.name}</h3>
-                               <p className= 'id'>Item Code{item.id}</p>
-                               <p className= 'price'>Price{item.price}</p>
-                               <p className= 'location'>Price{item.location}</p>
-                               <p className= 'description'>Description{item.description}</p>
-                               <p className= 'rating'>Rating{item.category}</p>
-                           </div>
-                   </Grid.Column>
-                   )})}
-               </Grid.Row>
-           </Grid> */}
+      {product && product.map((item, i) => {
+        return (
+          // <Card style={{width: '250px'}}>
+          //   <div key={i}> 
+          //     <h1 style={{ color: "blue" }}> {item.name}</h1> 
+          //     <h1 style={{ color: "blue" }}>{item.description}</h1> 
+          //     <h1 style={{ color: "blue" }}>{item.price}</h1>  
+          //     <h1 style={{ color: "blue" }}>{item.location}</h1>
+              // <button 
+              //   style={{backgroundColor: "#e94c3d"}} 
+              //   onClick={()=>{return deleteItem(item.id),setTimeout(function(){ document.location.reload();}, 900)}}> Delete 
+              // </button>
+          //   </div>
+          // </Card>
+          <Item.Group>
+            <Item style={{backgroundColor: "white"}}>
+              <Item.Image size="small" src={item.URL} />
+              <Item.Content
+                verticalAlign="middle"
+                style={{ textAlign: "left", display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
+              <div style={{width: '50%'}}>
+                <Item.Header as="a">{item.name}</Item.Header>
+                <Item.Description style={{color: 'black'}}>Description: {item.description}</Item.Description>
+                <Item.Description style={{color: 'black'}}>Location: {item.location}</Item.Description>
+                <Item.Description style={{color: 'black'}}>Price: {item.price}</Item.Description>
+                <Item.Extra>
+                  <Icon color="green" name="check" /> 121 Votes
+                </Item.Extra>
+              </div>
+              <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', width: '50%'}}>
+                <Item.Extra style={{margin: '0 20px'}}>
+                  <Button onClick={()=>{return deleteItem(item.id),setTimeout(function(){ document.location.reload();}, 900)}}    color="red" floated='right'>
+                    Delete
+                    <Icon name='right chevron' />
+                  </Button>
+                </Item.Extra>
+              </div>
+              </Item.Content>
+            </Item>
+          </Item.Group>
+      )  })}
        </div>
    )
 }
