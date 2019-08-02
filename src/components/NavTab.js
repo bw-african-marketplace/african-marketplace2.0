@@ -1,9 +1,9 @@
 //tab component
-import React, {useState} from '../../node_modules/react'
+import React, { useState } from '../../node_modules/react'
 import { Menu, Segment } from '../../node_modules/semantic-ui-react'
+import { Link } from 'react-router-dom'
 
-
-const NavTab = (props) =>  {
+const NavTab = (props) => {
   console.log(props)
 
   //same as set people = props.setPeople
@@ -18,42 +18,57 @@ const NavTab = (props) =>  {
     
     
     return (
-        <div>
-           <Segment>
-            <img alt='logo' src={logo} />
-          </Segment>
-          <Menu pointing>
-              <Menu.Item name='Home' 
-                active={activeItem === 'home'} 
-                onClick={handleItemClick} />
+          <div>
+            <div className= 'logo-title-container'>
+              <div className='logo-container'>
+                <div className='logo-image'></div>
+              </div>
+            <div className= 'title'>Business Profile</div>
+          </div>
+          <Menu stackable={true} pointing>
+              <Link to="/">
+                <Menu.Item name='Home' 
+                  active={activeItem === 'home'} 
+                />
+              </Link>
             
-              <Menu.Item
-                  name='About'
-                active={activeItem === 'about'}
-                onClick={handleItemClick}
-              />
-              <Menu.Item
-                name='Contact Us'
-                active={activeItem === 'Contact Us'}
-                onClick={handleItemClick}
-              />
-              <Menu.Item
-                name='Business Profile'
-                active={activeItem === 'businessProfile'}
-                onClick={handleItemClick}
-              />
+              <Link to="/OurTeam">
+                <Menu.Item
+                  name='Our Team'
+                  active={activeItem === 'about'}
+                />
+              </Link>
+              <Link to="/CategoriesPage">
+                <Menu.Item
+                   name='Categories'
+                 active={activeItem === 'categories'}
+                />
+              </Link>
+              <Link to="/Contact">
+                <Menu.Item
+                  name='Contact Us'
+                  active={activeItem === 'Contact Us'}
+                />
+              </Link>
+              <Link to="/BusinessProfile">
+                <Menu.Item
+                  name='Business Profile'
+                  active={activeItem === 'businessProfile'}
+                />
+              </Link>
               <Menu.Menu position='right'>
 
               <Menu.Item>
                 <button icon='search'
-                    placeholder='Search...'>{buttonText} 
+                   placeholder='Search...'>Search
                 </button>
+                <input className='searchBox'  Business Profile />
               </Menu.Item>
             </Menu.Menu>
           </Menu>
         </div>
-        
-        )
+  
+  )
 }
 
 export default NavTab;

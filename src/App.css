@@ -1,3 +1,34 @@
+body {
+  margin: 0 auto;
+  width: 80%
+  }
+  body {
+    background-image: url(https://ctl.s6img.com/society6/img/MLkJE4ur6g7Zpi0XuI-V3yT7z9c/w_700/canvas/~artwork/s6-original-art-uploads/society6/uploads/misc/9dbd247b72954cc089696e0fcc998b61/~~/modern-faux-grey-silver-glitter-ombre-white-marble-canvas.jpg?wait=0&attempt=0);
+    background-position: center;
+    background-repeat: no repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    
+  }
+  
+  .TeamCards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    max-width: 800px;
+    width: 100%;
+
+  }
+
+.card-container {
+
+  width: 900px;
+  height: 90px;
+
+}
+  
 .App {
   text-align: center;
   background-color: black;
@@ -42,7 +73,10 @@
 
 .container-flex {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 /* ---------------------Logo Image--------------------------------------- */
@@ -67,6 +101,7 @@
   /* align-items: center; */
   justify-content: center;
   flex-direction: row;
+  flex-wrap: wrap;
   /* width: 200%; */
   margin-top: 2%;
 }
@@ -103,7 +138,7 @@
   /* align-items: center; */
   justify-content: center;
   flex-direction: row;
-  max-width: 262px;
+  max-width: 250px;
   max-height: 148px;
   width: 100%;
   text-align: center;
@@ -118,10 +153,10 @@
   /* align-items: center; */
   /* justify-content: center; */
   flex-direction: row;
+  flex-wrap: wrap;
   width: 100%;
   text-align: center;
   justify-content: center;
-  margin-left: 80%;
 }
 
 .TitleCB {
@@ -129,13 +164,14 @@
   display: flex;
 }
 
-/* .otherItemCard {
-  /* margin-top: 4%; */
+.other-items {
+  width: 100%;
+  max-width: 150px;
+}
 
-/* margin-bottom:4%;
-  background-color: black; */
-
-/* }  */
+/* .other-items img {
+  width: 100px;
+} */
 
 /* -----------------Login form----------------------- */
 
@@ -143,3 +179,140 @@
   padding-top: 2%;
   padding-bottom: 2%;
 }
+
+
+/* ========================================================= */
+
+
+ 
+ 
+ .title {
+  display: flex;
+  flex-wrap: wrap;
+  color: rgb(199, 199, 199);
+  font-size: 4rem;
+ }
+ @media (max-width: 500px) {
+  .title {
+    display: flex;
+    flex-wrap: wrap;
+    color: rgb(199, 199, 199);
+    font-size: 20px;
+  }
+ }
+ .business {
+  margin-left: auto
+ }
+ 
+ .logo-image {
+  display: flex;
+  flex-wrap: wrap;
+  background: url('./images/African-Marketplace-logo.png');
+  height: 200px;
+  width: 200px;
+  background-position: center ;
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding-bottom: 60px
+ }
+ @media (max-width: 500px) {
+   .logo-image {
+    display: flex;
+    flex-wrap: wrap;
+    background: url('./images/African-Marketplace-logo.png');
+    height: 150px;
+    width: 150px;
+    background-position: center ;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding-bottom: 0px
+   }
+ }
+ 
+ .logo-container {
+  margin-top: 30px
+ }
+ 
+ 
+ .logo-title-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+ 
+ 
+ }
+ 
+  .grid-pics {
+  display:flex;
+  flex-wrap: wrap;
+  border-radius: 5%;
+  width:500px;
+  height:500px;
+ }
+  .ui.grid .row .column img, .ui.grid .row img {
+    max-width: 90%;
+    max-height: 270px;
+    margin-bottom: 30px;
+    margin-top: 20px
+ }
+  @media (max-width: 500px) {
+    .ui.grid .row .column img, .ui.grid .row img {
+      max-width: 90%;
+      max-height: 100px;
+      margin-bottom: 30px;
+      margin-top: 20px
+  }
+ 
+ }
+ .searchBox {
+  width: auto
+ }
+ 
+ .infoGrid{
+  display: flex;
+  flex-wrap: wrap;
+  position:relative;
+ 
+ }
+ 
+ .information {
+  font-size: 15px ;
+  position: absolute;
+  left:0;
+  width: 60%;
+  background: #1a1a1a66;
+  top: 0;
+  height: 100%;
+  color: #fafafa;
+ }
+ 
+ @media (max-width: 500px) {
+  .information {
+    font-size: 9px ;
+    position: absolute;
+    left: 10px;
+    width: 70%;
+    background: #1a1a1a66;
+    top: 0;
+    height: 100%;
+    color: #fafafa;
+  }
+ }
+ @media (max-width:500px) {
+  a.item {
+    width: 20px,
+  }
+ }
+ 
+  @media (max-width: 500px){
+  .ui.menu {
+    font-size: .9rem
+ 
+  }
+ }
+ 
+ @media(max-width: 500px) {
+  a .item .business {
+    display: none;
+  }
+ }

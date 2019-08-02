@@ -17,6 +17,8 @@ import ComparisonList from "./components/UI-Components/ComparisonList";
 import CategoryItems from "./components/CategoryItems";
 
 import OtherItems from "./components/UI-Components/OtherItems";
+import TeamCards from './components/TeamCards'
+import Footer from './components/Footer'
 
 // import ComparisonList from './components/UI-Components/ComparisonList';
 // import LoginForm from './components/LoginForm';
@@ -32,13 +34,19 @@ function App() {
         <Route exact path="/" component={Auth} />
         <NavTab />
 
+        <Route exact path="/MarketPlace" component={MarketPlace} />
+        <Route exact path="/CategoriesPage" component={CategoriesPage} />
+        <Route exact path="/CategoriesPage/:category" render={(props) => <CategoryItems {...props} />} />
+
+        <Route path="/ComparisonList" component={ComparisonList} />
         <Route exact path="/" component={MarketPlace} />
-        <Route path="/CategoriesPage" component={CategoriesPage} />
         <Route exact path="/" component={ComparisonList} />
         <Route exact path="/BusinessProfile" component={BusinessProfile} />
-        <OtherItems />
-        <Contact exact path="Contact" component={Contact}/>
+        <Route exact path="/Contact" component={Contact} />
+        <Route exact path="/OurTeam" component={TeamCards} />
         <Route exact path="/CategoryItems" component={CategoryItems} />
+        <OtherItems />
+        <Footer />
       </div>
     </div>
   );

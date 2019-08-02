@@ -9,9 +9,10 @@ import Info from "./Info";
 export default function MarketPlace() {
     return (
       <div className="container-flex">
-          <TopImage />
           <Info />
-         
+          <div>
+            <TopImage />
+          </div>
       </div>
     );
 }

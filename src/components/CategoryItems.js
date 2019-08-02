@@ -7,34 +7,42 @@ import axiosWithAuth from './axioAuth';
 export default function CategoryItems() {
      const [product, setProduct] = useState();
      const getProducts = () => {
-       axiosWithAuth()
-         .get(`/items`)
-         .then(response => setProduct(response.data))
+      const id = window.location.href.split('/').pop() 
+      axiosWithAuth()
+         .get(`items/category/${id}`)
+         .then(response => {
+           console.log('response', response)
+           setProduct(response.data)
+           console.log(window.location.href.split('/').pop())
+          })
          .catch(error => {
-           console.log(error.response.message);
+           console.log(error);
          });
      };
      useEffect(() => getProducts(), []);
      console.log(product, "products here");
 
-
+     const deleteItem=()=>{
+      axiosWithAuth().delete()
+    }
+    
 
   return (
     <div>
-      {product && product.map(item => {
+      {product && product.map((item) => {
+        // if (item.category === 'AnimalProducts')
         return (
-          <div>
+          
             <Item.Group>
               <Item style={{backgroundColor: "white"}}>
-                {console.log(item)}
-                <Item.Image size="small" src="https://picsum.photos/200" />
+                <Item.Image size="small" src={item.URL} />
                 <Item.Content
                   verticalAlign="middle"
                   style={{ textAlign: "left" }}
                 >
                   <Item.Header as="a">{item.name}</Item.Header>
                   <Item.Description style={{color: 'black'}}>Location: {item.location}</Item.Description>
-                  <Item.Description style={{color: 'black'}}>Location: {item.description}</Item.Description>
+                  <Item.Description style={{color: 'black'}}>Description: {item.description}</Item.Description>
                   <Item.Description style={{color: 'black'}}>Price: {item.price}</Item.Description>
                   <Item.Extra>
                     <Icon color="green" name="check" /> 121 Votes
@@ -42,10 +50,10 @@ export default function CategoryItems() {
                 </Item.Content>
               </Item>
             </Item.Group>
-          </div>
+          
         )  
       })}
-  
+      
       
     </div>
   );
