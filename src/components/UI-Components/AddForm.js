@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Form, Button, Divider } from 'semantic-ui-react'
+import { Form, Button, Divider, Dropdown } from 'semantic-ui-react'
 
 
 class AddForm extends Component {
@@ -26,6 +26,64 @@ class AddForm extends Component {
 
   render() {
     console.log(this.state.category)
+
+    const categoryOptions = [
+      {
+        key: 'AnimalProducts',
+        text: 'AnimalProducts',
+        value: 'AnimalProducts'
+      },
+      {
+        key: 'Beans',
+        text: 'Beans',
+        value: 'Beans'
+      },
+      {
+        key: 'Fruits',
+        text: 'Fruits',
+        value: 'Fruits'
+      },
+      {
+        key: 'CerealsMaize',
+        text: 'CerealsMaize',
+        value: 'CerealsMaize'
+      },
+      {
+        key: 'CerealsRice',
+        text: 'CerealsRice',
+        value: 'CerealsRice'
+      },
+      {
+        key: 'CerealsOther',
+        text: 'CerealsOther',
+        value: 'CerealsOther'
+      },
+      {
+        key: 'Peas',
+        text: 'Peas',
+        value: 'Peas'
+      },
+      {
+        key: 'RootsTubers',
+        text: 'RootsTubers',
+        value: 'RootsTubers'
+      },
+      {
+        key: 'Vegetables',
+        text: 'Vegetables',
+        value: 'Vegetables'
+      },
+      {
+        key: 'SeedsNuts',
+        text: 'SeedsNuts',
+        value: 'SeedsNuts'
+      },
+      {
+        key: 'Other',
+        text: 'Other',
+        value: 'Other'
+      },
+    ]
     return (
       <div>
 <p></p><p></p>
@@ -35,9 +93,9 @@ class AddForm extends Component {
             <option value="AnimalProducts">AnimalProducts </option>
             <option value="Beans"> Beans </option>
             <option value="Fruits"> Fruits </option>
-            <option value="CerealsMaize"> CerealMaize </option>
-            <option value="CerealsRice"> CerealRice </option>
-            <option value="CerealsOther"> CerealOther </option>
+            <option value="CerealsMaize"> CerealsMaize </option>
+            <option value="CerealsRice"> CerealsRice </option>
+            <option value="CerealsOther"> CerealsOther </option>
             <option value="Peas"> Peas </option>
             <option value="RootsTubers"> RootsTubers </option>
             <option value="Vegetables"> Vegetables </option>
@@ -45,7 +103,14 @@ class AddForm extends Component {
           </select>
           <strong><p>Enter new product info below:</p></strong>
           <Form size='mini' key='mini'>
-
+            {/* <Dropdown
+              placeholder='Select Category'
+              fluid
+              onChange={this.onChangeHandle} 
+              value={this.state.category} 
+              name="category"
+              selection
+              options={categoryOptions} /> */}
             <Form.Group widths='equal'>
               <Form.Field name="URL" label='URL' control='input' placeholder='Img URL' value={this.state.URL}
                 onChange={this.onChangeHandle}/>
