@@ -1,12 +1,7 @@
-
-//  set up a migration to connect to the api via axios
-        //get, post, delete, update, get.id search 
-
 import React from 'react'
 
 //  set up a migration to connect to the api via axios
         //get, post, delete, update, get.id
-
 
 const productInfo = 
 [
@@ -17,7 +12,7 @@ const productInfo =
         description:'description',
         soldOutItems: 'productsSoldOut',
     },
-  
+
     {   
         id: 1,
         name:'Clean House',

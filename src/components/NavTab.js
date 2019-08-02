@@ -14,18 +14,42 @@ const NavTab = (props) => {
       event.preventDefault()
 
     }
-    const logo = require("../images/African-Marketplace-logo.png");
+
+  const [title, setTitle] = useState({name:''})
+  const change = () => {
+      
+  }
+
+    useEffect((change, []) => {
+      if ()
+      console.log(title)
+    })
+    // const logo = require("../images/African-Marketplace-logo.png");
     
+    // // const title = (props) => (
     
+    // //   const {
+    // //   ContactTitle: "Contact",
+    // //   BusinessTitle: "Business Profile",
+    // //   TeamTitle: 'Our Team',
+    // //   CategoryTitle: 'Categories',
+    // //   Home: 'Home',
+    // //   return(
+      
+    // //     )
+    // //   }
+      
+    // // );
+
     return (
           <div>
             <div className= 'logo-title-container'>
               <div className='logo-container'>
                 <div className='logo-image'></div>
               </div>
-            <div className= 'title'>Business Profile</div>
+            <div className= 'title'>{title.name}</div>
           </div>
-          <Menu pointing>
+          <Menu stackable={true} pointing>
               <Link to="/">
                 <Menu.Item name='Home' 
                   active={activeItem === 'home'} 

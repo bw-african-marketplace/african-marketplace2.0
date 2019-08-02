@@ -37,7 +37,6 @@ function App() {
         <Route exact path="/MarketPlace" component={MarketPlace} />
         <Route exact path="/CategoriesPage" component={CategoriesPage} />
         <Route exact path="/CategoriesPage/:category" render={(props) => <CategoryItems {...props} />} />
-        {/* <Route exact path="/ProductCard/:category" render={(props) => <ProductCard {...props} />} /> */}
 
         <Route path="/ComparisonList" component={ComparisonList} />
         <Route exact path="/" component={MarketPlace} />
@@ -45,7 +44,6 @@ function App() {
         <Route exact path="/BusinessProfile" component={BusinessProfile} />
         <Route exact path="/Contact" component={Contact} />
         <Route exact path="/OurTeam" component={TeamCards} />
-        <Contact exact path="Contact" component={Contact}/>
         <Route exact path="/CategoryItems" component={CategoryItems} />
         <OtherItems />
         <Footer />

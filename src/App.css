@@ -1,3 +1,35 @@
+body {
+  margin: 0 auto;
+  border: green 1px solid;
+  font-size: 62.5%;
+  }
+  body {
+    background-image: url(https://ctl.s6img.com/society6/img/MLkJE4ur6g7Zpi0XuI-V3yT7z9c/w_700/canvas/~artwork/s6-original-art-uploads/society6/uploads/misc/9dbd247b72954cc089696e0fcc998b61/~~/modern-faux-grey-silver-glitter-ombre-white-marble-canvas.jpg?wait=0&attempt=0);
+    background-position: center;
+    background-repeat: no repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    
+  }
+  
+  .TeamCards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    max-width: 800px;
+    width: 100%;
+
+  }
+
+.card-container {
+
+  width: 900px;
+  height: 90px;
+
+}
+  
 .App {
   text-align: center;
   background-color: black;
@@ -10,20 +42,10 @@
  margin-left: 10%;
 }
 
-  @media (max-width: 500px) {
-    body {
-    margin: 0 auto;
-    width:80%;
-    font-size: 62.5%
-  } 
-}
-
-.App {
-  margin: auto 0;
-  text-align: center;
-;
-  border: orange 3px solid;
-  background: black;
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+  pointer-events: none;
 }
 
 .App-header {
@@ -50,7 +72,7 @@
   }
 }
 
-.title {
+.container-flex {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -85,108 +107,74 @@
   margin-top: 2%;
 }
 
+/* ---------------------Mid Section (Comparison Section)----------------- */
 
-.logo-title-container {
+.ComparisonContainer {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
-  
-
+  justify-content: center;
+  flex-direction: row;
+  width: 100%;
+  /* text-align: center; */
 }
 
-
-img {
-  display:flex;
-  flex-wrap: wrap;
-  border-radius: 5%;
-  width:500px;
-  height:500px;
-
-}
-  .ui.grid .row .column img, .ui.grid .row img {
-    max-width: 90%;
-    max-height: 270px;
-    margin-bottom: 30px;
-    margin-top: 20px
-}
-  @media (max-width: 500px) {
-    .ui.grid .row .column img, .ui.grid .row img {
-      max-width: 90%;
-      max-height: 100px;
-      margin-bottom: 30px;
-      margin-top: 20px
-  }
-
-}
-.searchBox {
-  width: auto
+.compareCard {
+  margin-top: 4%;
+  margin-bottom: 4%;
+  background-color: lightgrey;
+  width: 94%;
+  margin-left: 3%;
+  /* padding-left: .5%; */
 }
 
-.infoGrid{
+.compTitle {
+  padding-top: 1%;
+  padding-bottom: 3%;
+}
+
+/* ---------------------Bottom  (Other Items Section)---------------------*/
+
+.ui-image {
   display: flex;
-  flex-wrap: wrap;
-  position:relative;
-
+  /* align-items: center; */
+  justify-content: center;
+  flex-direction: row;
+  max-width: 250px;
+  max-height: 148px;
+  width: 100%;
+  text-align: center;
+  /* margin: 10% 0; */
+  /* min-height: 200px; */
+  /* background-color: rgba(33, 33, 33, .3); */
+  /* align-items: center; */
 }
-.member-paragraph {
-  margin: 0 auto;
+
+.CoffeeContainer {
   display: flex;
+  /* align-items: center; */
+  /* justify-content: center; */
+  flex-direction: row;
   flex-wrap: wrap;
-  align-content: flex-start;
-  font-size: .9rem;
-  width: 90%;
-  
-
-  color: white;
-  border: green 1px solid;
+  width: 100%;
+  text-align: center;
+  justify-content: center;
 }
 
-.information {
-  font-size: 15px ;
-  position: absolute;
-  left:0;
-  width: 60%;
-  background: #1a1a1a66;
-  top: 0;
-  height: 100%;
-  color: #fafafa;
+.TitleCB {
+  justify-content: center;
+  display: flex;
 }
 
-@media (max-width: 500px) {
-  .information {
-    font-size: 9px ;
-    position: absolute;
-    left: 10px;
-    width: 70%;
-    background: #1a1a1a66;
-    top: 0;
-    height: 100%;
-    color: #fafafa;
-  }
-}
-@media (max-width:500px) {
-  a.item {
-    width: 20px,
-  }
+.other-items {
+  width: 100%;
+  max-width: 150px;
 }
 
-  @media (max-width: 500px){
-  div.ui.pointing.menu {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    height: 90px
-  }
-}
+/* .other-items img {
+  width: 100px;
+} */
 
-  @media (max-width: 500px){
-  .ui.menu {
-    font-size: .9rem
-
-  }
-}
+/* -----------------Login form----------------------- */
 
 .LoginForm {
   padding-top: 2%;
@@ -288,15 +276,9 @@ img {
  
  }
  
- .information {
-  font-size: 15px ;
-  position: absolute;
-  left:0;
-  width: 60%;
-  background: #1a1a1a66;
-  top: 0;
-  height: 100%;
-  color: #fafafa;
+ .description {
+  font-size: .8rem ;
+  
  }
  
  @media (max-width: 500px) {
@@ -318,17 +300,6 @@ img {
  }
  
   @media (max-width: 500px){
-  div.ui.pointing.menu {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    height: 90px
-  }
- }
- 
-  @media (max-width: 500px){
   .ui.menu {
     font-size: .9rem
  
@@ -339,4 +310,4 @@ img {
   a .item .business {
     display: none;
   }
- }
+ }    

@@ -11,7 +11,8 @@ export default function CategoryItems() {
       axiosWithAuth()
          .get(`items/category/${id}`)
          .then(response => {
-           setProduct([response.data])
+           console.log('response', response)
+           setProduct(response.data)
            console.log(window.location.href.split('/').pop())
           })
          .catch(error => {
@@ -28,12 +29,12 @@ export default function CategoryItems() {
 
   return (
     <div>
-      {product && product.map((item, index) => {
-        // if (item.category === req.params.id)
+      {product && product.map((item) => {
+        // if (item.category === 'AnimalProducts')
         return (
-          <div>
+          
             <Item.Group>
-              <Item key={index} style={{backgroundColor: "white"}}>
+              <Item style={{backgroundColor: "white"}}>
                 <Item.Image size="small" src={item.URL} />
                 <Item.Content
                   verticalAlign="middle"
@@ -41,7 +42,7 @@ export default function CategoryItems() {
                 >
                   <Item.Header as="a">{item.name}</Item.Header>
                   <Item.Description style={{color: 'black'}}>Location: {item.location}</Item.Description>
-                  <Item.Description style={{color: 'black'}}>Location: {item.description}</Item.Description>
+                  <Item.Description style={{color: 'black'}}>Description: {item.description}</Item.Description>
                   <Item.Description style={{color: 'black'}}>Price: {item.price}</Item.Description>
                   <Item.Extra>
                     <Icon color="green" name="check" /> 121 Votes
@@ -49,10 +50,10 @@ export default function CategoryItems() {
                 </Item.Content>
               </Item>
             </Item.Group>
-          </div>
+          
         )  
       })}
-  
+      
       
     </div>
   );

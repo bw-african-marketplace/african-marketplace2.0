@@ -61,13 +61,13 @@ const CategoryCard = () => {
       'examples': 'chic, dry, green, etc.'
     },
     {
-      'category': 'Roots&Tubers', 
+      'category': 'RootsTubers', 
       'imgUrl': require('../images/categories/roots.jpg'),
       'description': '',
       'examples': 'potatoes, sunflowers, etc.'
     },
     {
-      'category': 'Seeds&Nuts', 
+      'category': 'SeedsNuts', 
       'imgUrl': require('../images/categories/nuts.jpg'),
       'description': '',
       'examples': 'nuts, sunflowers, etc.'
@@ -75,13 +75,13 @@ const CategoryCard = () => {
     {
       'category': 'Vegetables', 
       'imgUrl': require('../images/categories/vegetables.jpg'),
-      'description': 'test',
+      'description': '',
       'examples': 'carrots, cauliflower, cucumber, etc.'
     },
     {
-      'category': 'cooking', 
+      'category': 'Cooking', 
       'imgUrl': require('../images/categories/vegetables.jpg'),
-      'description': 'test',
+      'description': '',
       'examples': 'carrots, cauliflower, cucumber, etc.'
     }
   ]
