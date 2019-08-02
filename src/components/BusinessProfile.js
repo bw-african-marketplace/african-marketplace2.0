@@ -92,7 +92,7 @@ console.log(deletes)
               </div>
               <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', width: '50%'}}>
                 <Item.Extra style={{margin: '0 20px'}}>
-                  <Button onClick={()=>{return deleteItem(item.id),setTimeout(function(){ document.location.reload();}, 900)}}    color="red" floated='right'>
+                  <Button size={"mini"} compact={true} onClick={()=>{return deleteItem(item.id),setTimeout(function(){ document.location.reload();}, 900)}}    color="red" floated='right'>
                     Delete
                     <Icon name='right chevron' />
                   </Button>
