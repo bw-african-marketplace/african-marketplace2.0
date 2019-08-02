@@ -25,7 +25,7 @@ const NavTab = (props) => {
               </div>
             <div className= 'title'>Business Profile</div>
           </div>
-          <Menu pointing>
+          <Menu stackable={true} pointing>
               <Link to="/">
                 <Menu.Item name='Home' 
                   active={activeItem === 'home'} 
