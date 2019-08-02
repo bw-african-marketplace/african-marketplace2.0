@@ -3,7 +3,7 @@
 // NEED TO UPDATE EACH CARD TO BE A LINK
 
 import React from "react";
-import { Container, Header, Grid, Card, Image, Link } from "semantic-ui-react";
+import { Container,Card, Image, Link } from "semantic-ui-react";
 import ComparisonPage from "./CategoryItems"
 import CategoryCard from "./CategoryCard"
 

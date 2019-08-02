@@ -53,6 +53,8 @@ class LoginForm extends Component {
 
   handleSubmit = event => {
     console.log("Submitting");
+    
+    
     event.preventDefault();
     const localProps = this.props;
     return axios

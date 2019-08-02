@@ -60,12 +60,13 @@ console.log(deletes)
 
    return (
    <div>
+       <AddForm getItems={getItems} />
       {product && product.map((item, i) => {return <div key={i}> <h1 style={{ color: "blue" }}> {item.name}</h1> <h1>{item.description}</h1> <h1>{item.price}</h1>  <h1>{item.location}</h1>
-      <button stylye={{color: "white"}} onClick={()=>{return deleteItem(item.id),setTimeout(function(){ document.location.reload();}, 900)}}> Delete </button>
+      <button style={{backgroundColor: "#e94c3d"}} onClick={()=>{return deleteItem(item.id),setTimeout(function(){ document.location.reload();}, 900)}}> Delete </button>
       </div>  })}
 
-       <AddForm getItems={getItems} />
-       {/* <Grid>
+       
+       <Grid>
            <Grid.Row columns={3}>
                {productInfo.map(item => {
                    return (
@@ -82,7 +83,7 @@ console.log(deletes)
                    </Grid.Column>
                    )})}
                </Grid.Row>
-           </Grid> */}
+           </Grid>
        </div>
    )
 }

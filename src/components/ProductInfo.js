@@ -1,13 +1,12 @@
-<<<<<<< HEAD
 
 //  set up a migration to connect to the api via axios
         //get, post, delete, update, get.id search 
-=======
+
 import React from 'react'
 
 //  set up a migration to connect to the api via axios
         //get, post, delete, update, get.id
->>>>>>> development
+
 
 const productInfo = 
 [
@@ -27,10 +26,6 @@ const productInfo =
         description:'Clean house, clean mind',
         soldOutItems: 'productsSoldOut'
     },
-<<<<<<< HEAD
-
-=======
->>>>>>> development
     {
         id: 2,
         name:'Fruit Cake',
@@ -39,11 +34,6 @@ const productInfo =
         description:'Fruit treats and sweets',
         soldOutItems: 'productsSoldOut'
     },
-<<<<<<< HEAD
-
-
-=======
->>>>>>> development
     // window.localStorage.setItem = useState()
     // it is to putting the information int
     // window.localStorage.getIem =  useState() 
@@ -56,10 +46,6 @@ const productInfo =
         description:'Clean house, clean mind',
         soldOutItems: 'productsSoldOut'
     },
-<<<<<<< HEAD
-
-=======
->>>>>>> development
     {
         id: 4,
         name:'Fitness',
@@ -68,10 +54,6 @@ const productInfo =
         description:'Build a Strong Body',
         soldOutItems: 'productsSoldOut'
     },
-<<<<<<< HEAD
-
-=======
->>>>>>> development
     {
         id: 5,
         name:'Dog Sense',
@@ -80,33 +62,6 @@ const productInfo =
         description:'All Dog Go to Heaven',
         soldOutItems: 'productsSoldOut'
     },
-<<<<<<< HEAD
-
-
 ]
 
-
-// { multiple products per company array
-//     Name:'Candy wharehouse'
-//    [{
-//     image: 'https://www.candywarehouse.com/assets/item/regular/mms-milk-chocolate-candy-red-127628.jpg',
-//     Price:'price',
-//     Description:'description',
-//     SoldOutItems: 'productsSoldOut',
-//    },
-   
-//     {
-//     image: 'https://www.candywarehouse.com/assets/item/regular/mms-milk-chocolate-candy-red-127628.jpg',
-//     Price:'price',
-//     Description:'description',
-//     SoldOutItems: 'productsSoldOut',
-//     }]
-    
-// },
-
-
-=======
-]
-
->>>>>>> development
 export default productInfo

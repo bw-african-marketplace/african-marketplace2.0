@@ -9,14 +9,14 @@
   max-width: 80%;
  margin-left: 10%;
 }
-/* @media (max-width: 500px) {
-  body {
-  margin: 0 auto;
-  width:80%;
-  font-size: 62.5%
-} */
 
-/* } */
+  @media (max-width: 500px) {
+    body {
+    margin: 0 auto;
+    width:80%;
+    font-size: 62.5%
+  } 
+}
 
 .App {
   margin: auto 0;

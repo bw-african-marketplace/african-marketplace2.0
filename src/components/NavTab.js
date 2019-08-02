@@ -1,10 +1,9 @@
 //tab component
-import React, {useState} from '../../node_modules/react'
+import React, { useState } from '../../node_modules/react'
 import { Menu, Segment } from '../../node_modules/semantic-ui-react'
 import { Link } from 'react-router-dom'
 
-
-const NavTab = (props) =>  {
+const NavTab = (props) => {
   console.log(props)
 
   //same as set people = props.setPeople
@@ -15,6 +14,7 @@ const NavTab = (props) =>  {
       event.preventDefault()
 
     }
+    const logo = require("../images/African-Marketplace-logo.png");
     
     
     return (
@@ -66,13 +66,9 @@ const NavTab = (props) =>  {
               </Menu.Item>
             </Menu.Menu>
           </Menu>
-          
-      <div>
-
-  </div>
-</div>
-   
-      )
+        </div>
+  
+  )
 }
 
-export default NavTab;  
+export default NavTab;
