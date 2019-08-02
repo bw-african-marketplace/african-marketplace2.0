@@ -75,13 +75,13 @@ const CategoryCard = () => {
     {
       'category': 'Vegetables', 
       'imgUrl': require('../images/categories/vegetables.jpg'),
-      'description': 'test',
+      'description': '',
       'examples': 'carrots, cauliflower, cucumber, etc.'
     },
     {
       'category': 'cooking', 
       'imgUrl': require('../images/categories/vegetables.jpg'),
-      'description': 'test',
+      'description': '',
       'examples': 'carrots, cauliflower, cucumber, etc.'
     }
   ]

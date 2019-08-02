@@ -44,7 +44,6 @@ function App() {
         <Route exact path="/BusinessProfile" component={BusinessProfile} />
         <Route exact path="/Contact" component={Contact} />
         <Route exact path="/OurTeam" component={TeamCards} />
-        <Contact exact path="Contact" component={Contact}/>
         <Route exact path="/CategoryItems" component={CategoryItems} />
         <OtherItems />
         <Footer />
