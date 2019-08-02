@@ -36,19 +36,10 @@ return (
         <Form.Field control={Checkbox} label='I agree to the Terms and Conditions' />
       
         <div className='form-row'>
-          <button>Submit</button>
+          <button style={{backgroundColor: "#e94c3d", padding: "5px"}}>Submit Contact Form</button>
         </div>
       </Form>
     </div>
-    <footer className="navbar navbar-dark bg-dark">
-      <h3><strong>Find us on...</strong></h3>
-      <div className="social">
-      <a href= "twitter.com"><FontAwesomeIcon className = "twitter" icon={faTwitter}/></a>
-      <a href= "facebook.com"><FontAwesomeIcon className = "facebook" icon={faFacebook}/></a>
-      <a href= "instagram.com"><FontAwesomeIcon className = "instagram" icon={faInstagram} /></a>
-      </div>
-      <p>Copyright © 2019, African Marketplace, USA</p>
-   </footer>
 
   </div>
 
