@@ -1,58 +1,43 @@
 //tab component
-import React, {useState} from '../../node_modules/react'
-import { Menu, Segment } from '../../node_modules/semantic-ui-react'
+import React from "react";
+import { Menu } from "semantic-ui-react";
+import "../App.css";
 
-
-const NavTab = (props) =>  {
-  console.log(props)
-
+const NavTab = (props) => {
   //same as set people = props.setPeople
-    const {addProduct, buttonText, activeItem} = props
+  const { addProduct, buttonText, activeItem } = props;
+  console.log(props);
 
-    const [product, setProduct ] = useState()
-    const handleItemClick = event => {
-      event.preventDefault()
-
-    }
-    const logo = require("../images/African-Marketplace-logo.png");
-    
-    return (
-        <div>
-           <Segment>
-            <img alt='logo' src={logo} />
-          </Segment>
-          <Menu pointing>
-              <Menu.Item name='Home' 
-                active={activeItem === 'home'} 
-                onClick={handleItemClick} />
-            
-              <Menu.Item
-                  name='About'
-                active={activeItem === 'about'}
-                onClick={handleItemClick}
-              />
-              <Menu.Item
-                name='Contact Us'
-                active={activeItem === 'Contact Us'}
-                onClick={handleItemClick}
-              />
-              <Menu.Item
-                name='Business Profile'
-                active={activeItem === 'businessProfile'}
-                onClick={handleItemClick}
-              />
-              <Menu.Menu position='right'>
-
-              <Menu.Item>
-                <button icon='search'
-                    placeholder='Search...'>{buttonText} 
-                </button>
-              </Menu.Item>
-            </Menu.Menu>
-          </Menu>
+  return (
+    <div>
+      <div className="logo-title-container">
+        <div className="logo-container">
+          <div className="logo-image"></div>
         </div>
-        
-        )
-}
+        <div className="title">Business Profile</div>
+      </div>
+      <Menu stackable={true}  pointing>
+        <Menu.Item name="Home" active={activeItem === "home"} />
+        <Menu.Item name="About" active={activeItem === "about"} />
+        <Menu.Item name="Contact Us" active={activeItem === "Contact Us"} />
+        <Menu.Item
+          className="business"
+          name="Business Profile"
+          active={activeItem === "businessProfile"}
+        />
+        <Menu.Menu position="left">
+          <Menu.Item>
+            <button icon="search" placeholder="Search...">
+              Search
+            </button>
+            <input className="searchBox" Business Profile />
+          </Menu.Item>
+        </Menu.Menu>
+      </Menu>
+
+      <div></div>
+    </div>
+  );
+};
 
 export default NavTab;
